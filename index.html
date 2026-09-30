@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>任務管理器 Task Manager</h1>
+  </header>
+
+  <main class="container">
+
+    <!-- ＊＊重要＊＊ --><!-- 新增任務 --> 
+    <section class="add-section">
+      <form id="task-form">
+        <label for="task-input">新增任務：</label>
+        <div class="input-group">
+          <input type="text" id="task-input" placeholder="輸入任務名稱">
+          <button type="submit" id="add-btn">新增</button>
+        </div>
+        <p id="error-msg" class="error-msg"></p>
+      </form>
+    </section>
+
+    <!-- 篩選 -->
+    <section class="filter-section">
+      <span class="filter-label">篩選：</span>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="active">未完成</button>
+        <button class="filter-btn" data-filter="completed">已完成</button>
+      </div>
+    </section>
+
+    <!-- 任務清單 -->
+    <section class="list-section">
+        <span class="filter-label">任務清單：</span>
+      <ul id="task-list" class="task-list"></ul>
+    </section>
+
+    <!-- 統計 -->
+    <section class="stats-section">
+      <p id="stats">共 0 項　未完成 0 項　已完成 0 項</p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
